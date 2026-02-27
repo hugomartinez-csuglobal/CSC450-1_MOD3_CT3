@@ -1,0 +1,41 @@
+BEGIN Program
+
+    Declare integer variables:
+        num1, num2, num3
+
+    Prompt user to enter first integer
+    Read value into num1
+
+    Prompt user to enter second integer
+    Read value into num2
+
+    Prompt user to enter third integer
+    Read value into num3
+
+    Declare integer pointers:
+        ptr1, ptr2, ptr3
+
+    Allocate dynamic memory for each pointer:
+        ptr1 = new integer
+        ptr2 = new integer
+        ptr3 = new integer
+
+    Store values from variables into dynamic memory:
+        *ptr1 = num1
+        *ptr2 = num2
+        *ptr3 = num3
+
+    Display for each number:
+        Value of variable (numX)
+        Address of variable (&numX)
+        Address stored in pointer (ptrX)
+        Value stored at pointer (*ptrX)
+
+    Deallocate dynamic memory:
+        delete ptr1
+        delete ptr2
+        delete ptr3
+
+    Set pointers to nullptr
+
+END Program

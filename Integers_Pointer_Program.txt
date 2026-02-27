@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // Declare three integer variables (stack memory)
+    int num1, num2, num3;
+
+    // Prompt user for input
+    cout << "Enter the first integer: ";
+    cin >> num1;
+
+    cout << "Enter the second integer: ";
+    cin >> num2;
+
+    cout << "Enter the third integer: ";
+    cin >> num3;
+
+    // Declare three integer pointers
+    int* ptr1;
+    int* ptr2;
+    int* ptr3;
+
+    // Dynamically allocate memory (heap memory)
+    ptr1 = new int;
+    ptr2 = new int;
+    ptr3 = new int;
+
+    // Store variable values into dynamically allocated memory
+    *ptr1 = num1;
+    *ptr2 = num2;
+    *ptr3 = num3;
+
+    // Display values and addresses
+    cout << "\n--- Variable Information ---" << endl;
+    cout << "num1 value: " << num1 << endl;
+    cout << "num1 address: " << &num1 << endl;
+
+    cout << "\nnum2 value: " << num2 << endl;
+    cout << "num2 address: " << &num2 << endl;
+
+    cout << "\nnum3 value: " << num3 << endl;
+    cout << "num3 address: " << &num3 << endl;
+
+    cout << "\n--- Pointer Information ---" << endl;
+    cout << "ptr1 address stored: " << ptr1 << endl;
+    cout << "ptr1 dereferenced value: " << *ptr1 << endl;
+
+    cout << "\nptr2 address stored: " << ptr2 << endl;
+    cout << "ptr2 dereferenced value: " << *ptr2 << endl;
+
+    cout << "\nptr3 address stored: " << ptr3 << endl;
+    cout << "ptr3 dereferenced value: " << *ptr3 << endl;
+
+    // Free dynamically allocated memory
+    delete ptr1;
+    delete ptr2;
+    delete ptr3;
+
+    // Set pointers to nullptr to avoid dangling pointers
+    ptr1 = nullptr;
+    ptr2 = nullptr;
+    ptr3 = nullptr;
+
+    return 0;
+}
